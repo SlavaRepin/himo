@@ -471,6 +471,7 @@ input::placeholder {
 }
 
 .menu__link {
+  display: block;
   color: rgb(19, 19, 19);
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
@@ -1210,11 +1211,8 @@ body._lock {
     min-height: 5rem;
   }
 
-  .header__menu {
-    margin-right: 73px;
-  }
-
   .menu {
+    margin-right: 73px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -1238,9 +1236,6 @@ body._lock {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     row-gap: 3.125rem;
-    -webkit-column-gap: 0.625rem;
-       -moz-column-gap: 0.625rem;
-            column-gap: 0.625rem;
   }
 }
 
@@ -1263,6 +1258,12 @@ body._lock {
 @media screen and (min-width: 47.99875rem) {
   .header {
     min-height: 6.25rem;
+  }
+
+  .menu__list {
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
   }
 
   .menu__link {
@@ -1765,10 +1766,10 @@ body._lock {
             justify-content: space-between;
   }
 
-  .header__menu {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 1.625rem;
-            flex: 0 0 1.625rem;
+  .menu__list {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
   }
 
   .body-price__content {
@@ -1864,6 +1865,18 @@ body._lock {
 }
 
 @media screen and (max-width: 47.99875rem) and (max-width: 1200px) {
+  .menu__list {
+    -webkit-column-gap: calc(
+				10px + 20 * ((100vw - 320px) / (1200 - 320))
+			);
+       -moz-column-gap: calc(
+				10px + 20 * ((100vw - 320px) / (1200 - 320))
+			);
+            column-gap: calc(
+				10px + 20 * ((100vw - 320px) / (1200 - 320))
+			);
+  }
+
   .body-price__block-cost {
     top: calc(
 				-40px + -40 * ((100vw - 320px) / (1200 - 320))
@@ -1923,6 +1936,12 @@ body._lock {
     color: rgb(19, 19, 19);
   }
 
+  .menu {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 1.625rem;
+            flex: 0 0 1.625rem;
+  }
+
   .menu__body {
     position: fixed;
     z-index: 2;
@@ -1954,6 +1973,9 @@ body._lock {
             align-items: center;
     height: 50%;
     margin-top: 6.25rem;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
   }
 
   .menu__link {
@@ -2030,7 +2052,7 @@ body._lock {
 }
 
 @media screen and (min-width: 29.99875rem) and (max-width: 1200px) {
-  .header__menu {
+  .menu {
     margin-right: calc(
 				0px + 73 * ((100vw - 479.98px) / (1200 - 479.98))
 			);
